@@ -33,6 +33,7 @@
   position: relative;
   text-transform: uppercase;
   font-weight: 700;
+  transition: 0.5s;
 }
 
 .navbar .nav-item:hover {
@@ -52,4 +53,35 @@
 
 .navbar .nav-item:hover::after {
   width: 100%;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  font-size: 14px;
+  width: 120px;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 5px 5px;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+.dropdown-menu a:hover {
+  background-color: rgba(117, 114, 114, 0.237);
+  color: #e74c3c;
+}
+.dropdown-menu a:nth-last-child(1):hover {
+  border-radius: 0 0 5px 5px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }

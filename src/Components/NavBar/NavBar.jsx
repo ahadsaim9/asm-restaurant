@@ -1,3 +1,4 @@
+import logo from "../../../public/images/logo1.png";
 import "../NavBar/NavBar.css";
 const NavBar = () => {
   return (
@@ -21,7 +22,7 @@ const NavBar = () => {
           </li>
           <li>
             <a href="#" className="nav-item">
-              <img className="logo" src="/public/images/logo.png" alt="" />
+              <img className="logo" src={logo} alt="" />
             </a>
           </li>
 
@@ -30,10 +31,14 @@ const NavBar = () => {
               Booking
             </a>
           </li>
-          <li>
-            <a href="#" className="nav-item">
+          <li className="dropdown">
+            <a href="#" className="nav-item ">
               Blog
             </a>
+            <div className="dropdown-menu">
+              <a href="#">BLOG</a>
+              <a href="#">SINGLE BLOG</a>
+            </div>
           </li>
           <li>
             <a href="#" className="nav-item">
