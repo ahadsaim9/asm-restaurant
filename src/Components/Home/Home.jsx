@@ -1,7 +1,9 @@
+import NavBar from "../NavBar/NavBar";
+
 const Home = () => {
   return (
     <div>
-      <h1 className="text-3xl text-center mt-4">This is Home page.</h1>
+      <NavBar></NavBar>
     </div>
   );
 };
