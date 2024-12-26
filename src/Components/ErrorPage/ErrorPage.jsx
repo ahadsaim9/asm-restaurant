@@ -1,6 +1,6 @@
 const ErrorPage = () => {
   return (
-    <div>
+    <div className="flex h-svh w-full justify-center items-center">
       <h1>This is Error page.</h1>
     </div>
   );
