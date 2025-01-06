@@ -3,19 +3,33 @@
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
+  position: relative;
 }
-.bg_image_1 {
-  background-image: url("..//../../public/images/img-5.jpg");
+.slider {
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
-.bg_image_2 {
-  background-image: url("..//../../public/images/img-5.jpg");
+.bg_image_all {
+  animation: slider 32s infinite alternate;
 }
-.bg_image_3 {
-  background-image: url("..//../../public/images/img-5.jpg");
+
+@keyframes slider {
+  0% {
+    background-image: url("..//../../public/images/img-5.jpg");
+  }
+  33% {
+    background-image: url("..//../../public/images/img-2.jpg");
+  }
+  66% {
+    background-image: url("..//../../public/images/img-3.jpg");
+  }
+  100% {
+    background-image: url("..//../../public/images/img-4.jpg");
+  }
 }
-.bg_image_4 {
-  background-image: url("..//../../public/images/img-5.jpg");
-}
+
 .bg_image_all {
   height: 100%;
   width: 100%;
@@ -37,11 +51,4 @@
 .inner-container img {
   width: 300px;
   height: auto;
-}
-.icon {
-  transition: 0.5s;
-}
-.icon:hover {
-  transform: scale(1.2);
-  color: rgb(7, 202, 160);
 }
