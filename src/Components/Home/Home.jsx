@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <div>
       <NavBar></NavBar>
+
       <Slider></Slider>
     </div>
   );

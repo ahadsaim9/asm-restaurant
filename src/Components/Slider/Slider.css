@@ -5,34 +5,11 @@
   box-sizing: border-box;
   position: relative;
 }
+
 .slider {
-  box-sizing: border-box;
-  overflow: hidden;
+  position: relative;
   width: 100%;
   height: 100%;
-}
-.bg_image_all {
-  animation: slider 32s infinite alternate;
-}
-
-@keyframes slider {
-  0% {
-    background-image: url("..//../../public/images/img-5.jpg");
-  }
-  33% {
-    background-image: url("..//../../public/images/img-2.jpg");
-  }
-  66% {
-    background-image: url("..//../../public/images/img-3.jpg");
-  }
-  100% {
-    background-image: url("..//../../public/images/img-4.jpg");
-  }
-}
-
-.bg_image_all {
-  height: 100%;
-  width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,6 +17,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .inner-container {
   display: flex;
   justify-content: center;
@@ -48,7 +26,38 @@
   gap: 20px;
   color: white;
 }
+
 .inner-container img {
   width: 300px;
   height: auto;
+}
+
+.prev-btn {
+  position: absolute;
+  top: 300px;
+  border-radius: 50%;
+  left: 20px;
+  font-size: 50px;
+  background-color: #68ab9f;
+  color: white;
+  transition: 1s;
+}
+.next-btn {
+  position: absolute;
+  top: 300px;
+  border-radius: 50%;
+  right: 20px;
+  font-size: 50px;
+  background-color: #68ab9f;
+  color: white;
+  transition: 1s;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: #026956;
 }

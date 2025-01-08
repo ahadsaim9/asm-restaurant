@@ -1,95 +1,73 @@
+import { useState } from "react";
+import {
+  MdKeyboardArrowRight,
+  MdOutlineKeyboardArrowLeft,
+} from "react-icons/md";
 import "./Slider.css";
 import "./Button.css";
+import { Link } from "react-router-dom";
+
 const Slider = () => {
-  // *********** slider.js ************
+  const backgrounds = [
+    "/images/img-1.jpg",
+    "/images/img-2.jpg",
+    "/images/img-3.jpg",
+    "/images/img-4.jpg",
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === backgrounds.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? backgrounds.length - 1 : prevIndex - 1
+    );
+  };
+
+  /* ***************  *************** */
 
   return (
     <div className="container">
-      <div className="slider">
-        {/* <---------------- Start Item->1 ------------------> */}
-        <div className="item  bg_image_1 bg_image_all relative ">
-          <div className="inner-container ">
-            <img src="/public/images/logo1.png" alt="" />
-            <section>
-              <h1 className="italic md:text-5xl font-semibold uppercase mt-[-30px] ">
-                we serve quality food
-              </h1>
-              <hr className="border py-1.5 border-collapse mt-1 bg-[#68ab9f] rounded-md" />
-            </section>
-            <p className="w-3/4 italic text-justify mt-6 ">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Reprehenderit esse quo incidunt alias fugit totam corporis eaque
-              consectetur repudiandae est. ipsum dolor, sit amet consectetur
-              adipisicing elit. Reprehenderit esse quo incidunt alias fugit
-              totam corporis eaque consectetur repudiandae est.
-            </p>
-            <button className="btn after:bg-blue-[#68ab9f] ">Learn more</button>
-          </div>
+      <div
+        className="slider bg_image_all"
+        style={{
+          backgroundImage: `url(${backgrounds[currentIndex]})`,
+        }}
+      >
+        <button className="prev-btn " onClick={handlePrevious}>
+          <MdOutlineKeyboardArrowLeft />
+        </button>
+        <div className="inner-container">
+          <img src="/images/logo1.png" alt="Slider Logo" />
+          <section>
+            <h1 className="italic text-gray-500 md:text-5xl font-semibold uppercase mt-[-30px]">
+              We Serve Quality Food
+            </h1>
+            <hr className="border py-1.5 border-collapse mt-1 bg-[#68ab9f] rounded-md" />
+          </section>
+
+          <p
+            id="slide_des"
+            className="w-2/4 font-semibold italic text-justify mt-6 text-gray-500"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit esse quo is this body Lorem ipsum dolor sit. incidunt
+            alias fugit totam corporis eaque this consectetur repudiandae est.
+            <Link>
+              <span className="ml-2 font-bold text-orange-600"> See more</span>
+            </Link>
+          </p>
+          <button className="btn after:bg-[#68ab9f]">Learn More</button>
         </div>
-        {/* <---------------- End Item->1 ------------------> */}
-        {/* <---------------- Start Item->2 ------------------> */}
-        <div className="item bg_image_2 bg_image_all relative">
-          <div className="inner-container">
-            <img src="/public/images/logo1.png" alt="" />
-            <section>
-              <h1 className="italic md:text-5xl font-semibold uppercase mt-[-30px] ">
-                we serve quality food
-              </h1>
-              <hr className="border py-1.5 border-collapse mt-1 bg-[#68ab9f] rounded-md" />
-            </section>
-            <p className="w-3/4 italic text-justify mt-6 ">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Reprehenderit esse quo incidunt alias fugit totam corporis eaque
-              consectetur repudiandae est. ipsum dolor, sit amet consectetur
-              adipisicing elit. Reprehenderit esse quo incidunt alias fugit
-              totam corporis eaque consectetur repudiandae est.
-            </p>
-            <button className="btn after:bg-blue-[#68ab9f] ">Learn more</button>
-          </div>
-        </div>
-        {/* <---------------- End Item->2 ------------------> */}
-        {/* <---------------- Start Item->3 ------------------> */}
-        <div className="item bg_image_3 bg_image_all relative">
-          <div className="inner-container">
-            <img src="/public/images/logo1.png" alt="" />
-            <section>
-              <h1 className="italic md:text-5xl font-semibold uppercase mt-[-30px] ">
-                we serve quality food
-              </h1>
-              <hr className="border py-1.5 border-collapse mt-1 bg-[#68ab9f] rounded-md" />
-            </section>
-            <p className="w-3/4 italic text-justify mt-6 ">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Reprehenderit esse quo incidunt alias fugit totam corporis eaque
-              consectetur repudiandae est. ipsum dolor, sit amet consectetur
-              adipisicing elit. Reprehenderit esse quo incidunt alias fugit
-              totam corporis eaque consectetur repudiandae est.
-            </p>
-            <button className="btn after:bg-blue-[#68ab9f] ">Learn more</button>
-          </div>
-        </div>
-        {/* <---------------- End Item->3 ------------------> */}
-        {/* <---------------- Start Item->4 ------------------> */}
-        <div className="item bg_image_4 bg_image_all relative">
-          <div className="inner-container">
-            <img src="/public/images/logo1.png" alt="" />
-            <section>
-              <h1 className="italic md:text-5xl font-semibold uppercase mt-[-30px] ">
-                we serve quality food
-              </h1>
-              <hr className="border py-1.5 border-collapse mt-1 bg-[#68ab9f] rounded-md" />
-            </section>
-            <p className="w-3/4 italic text-justify mt-6 ">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Reprehenderit esse quo incidunt alias fugit totam corporis eaque
-              consectetur repudiandae est. ipsum dolor, sit amet consectetur
-              adipisicing elit. Reprehenderit esse quo incidunt alias fugit
-              totam corporis eaque consectetur repudiandae est.
-            </p>
-            <button className="btn after:bg-blue-[#68ab9f] ">Learn more</button>
-          </div>
-        </div>
-        {/* <---------------- End Item->4 ------------------> */}
+
+        <button className="next-btn" onClick={handleNext}>
+          <MdKeyboardArrowRight />
+        </button>
       </div>
     </div>
   );
