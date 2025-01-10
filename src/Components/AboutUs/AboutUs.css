@@ -1,0 +1,49 @@
+.image3 {
+  position: absolute;
+  top: 35px;
+  left: 0px;
+}
+.image3 img {
+  width: 246px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.image-box img {
+  width: 400px;
+  height: 400px;
+  box-shadow: 5px 5px 20px gray;
+  padding: 10px;
+  transition: 1s;
+}
+
+.image1 {
+  position: absolute;
+  top: 150px;
+  right: 50px;
+  z-index: 10;
+  transform: rotate(180deg);
+}
+.image2 {
+  z-index: 0;
+  position: absolute;
+  top: 150px;
+  right: 65px;
+  transform: rotate(-15deg);
+}
+.container1:hover .image1 {
+  transform: rotate(185deg);
+}
+.container1:hover .image2 {
+  transform: rotate(-20deg);
+}
+/* *************** midi *************** */
+@media screen and (max-width: 1220px) {
+  .image-box img {
+    width: 300px;
+    height: 300px;
+    box-shadow: 5px 5px 20px gray;
+    padding: 10px;
+    transition: 1s;
+  }
+}

@@ -8,7 +8,7 @@ import "./Button.css";
 import { Link } from "react-router-dom";
 
 const Slider = () => {
-  const backgrounds = [
+  const backgroundsImg = [
     "/images/img-1.jpg",
     "/images/img-2.jpg",
     "/images/img-3.jpg",
@@ -19,24 +19,24 @@ const Slider = () => {
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === backgrounds.length - 1 ? 0 : prevIndex + 1
+      prevIndex === backgroundsImg.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? backgrounds.length - 1 : prevIndex - 1
+      prevIndex === 0 ? backgroundsImg.length - 1 : prevIndex - 1
     );
   };
 
-  /* ***************  *************** */
+  /* *************** item start  *************** */
 
   return (
-    <div className="container">
+    <div className="container1 ">
       <div
-        className="slider bg_image_all"
+        className="slider  bg_image_all"
         style={{
-          backgroundImage: `url(${backgrounds[currentIndex]})`,
+          backgroundImage: `url(${backgroundsImg[currentIndex]})`,
         }}
       >
         <button className="prev-btn " onClick={handlePrevious}>
@@ -53,7 +53,7 @@ const Slider = () => {
 
           <p
             id="slide_des"
-            className="w-2/4 font-semibold italic text-justify mt-6 text-gray-500"
+            className="px-7 sm:px-10 md:px-0 md:w-2/4 font-semibold italic text-justify mt-6 text-gray-500"
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Reprehenderit esse quo is this body Lorem ipsum dolor sit. incidunt
