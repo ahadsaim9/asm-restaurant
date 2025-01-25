@@ -8,6 +8,43 @@
   height: 35px;
   object-fit: cover;
 }
+/* ***************  *************** */
+.recipes_all {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.img_box::after {
+  content: "Add";
+  height: 50px;
+  width: 50px;
+  background-color: rgb(124, 198, 143);
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-50%);
+  z-index: 10;
+  transition: 0.5s;
+  color: white;
+  border-radius: 10px;
+}
+.recipes_all:hover::after {
+  display: block;
+}
+
+.recipes_all img {
+  transition: 0.3s;
+  overflow: hidden;
+}
+.recipes_all:hover img {
+  transform: rotate(5deg) scale(1.15);
+  opacity: 0.3;
+}
+.recipes_all:hover .img_box::after {
+  display: flex;
+}
 /* *************** Media Screen~(max-width: 640px)*************** */
 
 @media screen and (max-width: 640px) {

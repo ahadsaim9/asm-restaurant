@@ -4,7 +4,6 @@ import image2 from "/public/images/img-2.jpg";
 import image3 from "/public/images/img-3.jpg";
 import image4 from "/public/images/img-4.jpg";
 import image5 from "/public/images/img-5.jpg";
-import image6 from "/public/images/img-2.jpg";
 import "./SpecialRecipes.css";
 import { IoIosStar, IoIosStarHalf, IoIosStarOutline } from "react-icons/io";
 import { FaConciergeBell } from "react-icons/fa";
@@ -12,7 +11,7 @@ import { Link } from "react-router-dom";
 const SpecialRecipes = () => {
   return (
     <div className="max-w-[1200px] mx-auto ">
-      <div className=" my-12  col-span-6 flex justify-center md:px-16 px-8   flex-col">
+      <div className=" my-12 flex justify-center md:pr-16 pr-2   flex-col">
         <h2 className="pl-4 font-[Pacifico] text-2xl mb-6 text-red-700    ">
           Special Recipes
         </h2>
@@ -33,12 +32,14 @@ const SpecialRecipes = () => {
           Dignissimos corporis sed nobis animi rem veniam.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-1 box-border ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 box-border">
         {/* ************** Item-->1 *************** */}
-        <section className="">
-          <Link to={"/"}>
-            <img className="images w-full h-auto" src={image1} alt="" />
-          </Link>
+        <section className="recipes_all  relative">
+          <div className="img_box">
+            <Link to={"/"}>
+              <img className=" w-full h-auto" src={image1} alt="" />
+            </Link>
+          </div>
           <div className="relative bg-gray-300 w-full">
             <p className="text-3xl  text-gray-600 absolute -top-5 left-1/2 transform -translate-x-1/2 ">
               <FaConciergeBell />
@@ -64,9 +65,11 @@ const SpecialRecipes = () => {
           </div>
         </section>
         {/* ************** Item-->2 *************** */}
-        <section>
-          <div>
-            <img className="w-full h-auto" src={image2} alt="" />
+        <section className="recipes_all  relative">
+          <div className="img_box">
+            <Link to={"/"}>
+              <img className=" w-full h-auto" src={image2} alt="" />
+            </Link>
           </div>
           <div className="relative bg-gray-300 w-full ">
             <p className="text-3xl text-gray-600 absolute -top-5 left-1/2 transform -translate-x-1/2 ">
@@ -93,9 +96,11 @@ const SpecialRecipes = () => {
           </div>
         </section>
         {/* ************** Item-->3 *************** */}
-        <section>
-          <div>
-            <img className="w-full h-auto" src={image3} alt="" />
+        <section className="recipes_all  relative">
+          <div className="img_box">
+            <Link to={"/"}>
+              <img className=" w-full h-auto" src={image3} alt="" />
+            </Link>
           </div>
           <div className="relative bg-gray-300 w-full">
             <p className="text-3xl text-gray-600 absolute -top-5 left-1/2 transform -translate-x-1/2 ">
@@ -123,9 +128,11 @@ const SpecialRecipes = () => {
         </section>
         {/* ******
          ******** Item-->4 *************** */}
-        <section>
-          <div>
-            <img className="w-full h-auto" src={image4} alt="" />
+        <section className="recipes_all  relative">
+          <div className="img_box">
+            <Link to={"/"}>
+              <img className=" w-full h-auto" src={image4} alt="" />
+            </Link>
           </div>
           <div className="relative bg-gray-300 w-full">
             <p className="text-3xl text-gray-600 absolute -top-5 left-1/2 transform -translate-x-1/2 ">
@@ -152,9 +159,11 @@ const SpecialRecipes = () => {
           </div>
         </section>
         {/* ************** Item-->5 *************** */}
-        <section>
-          <div>
-            <img className="w-full h-auto" src={image5} alt="" />
+        <section className="recipes_all  relative">
+          <div className="img_box">
+            <Link to={"/"}>
+              <img className=" w-full h-auto" src={image5} alt="" />
+            </Link>
           </div>
           <div className="relative bg-gray-300 w-full">
             <p className="text-3xl text-gray-600 absolute -top-5 left-1/2 transform -translate-x-1/2 ">
@@ -181,9 +190,11 @@ const SpecialRecipes = () => {
           </div>
         </section>
         {/* ************** Item-->6 *************** */}
-        <section>
-          <div>
-            <img className="w-full h-auto" src={image6} alt="" />
+        <section className="recipes_all  relative">
+          <div className="img_box">
+            <Link to={"/"}>
+              <img className=" w-full h-auto" src={image2} alt="" />
+            </Link>
           </div>
           <div className="relative bg-gray-300 w-full ">
             <p className="text-3xl text-gray-600 absolute -top-5 left-1/2 transform -translate-x-1/2 ">
