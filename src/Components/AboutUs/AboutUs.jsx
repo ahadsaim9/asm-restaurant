@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./AboutUs.css";
 import img1 from "/public/images/bg-image-3.jpg";
 import img2 from "/public/images/bg-image-3.jpg";
@@ -33,6 +34,11 @@ const AboutUs = () => {
           voluptas perspiciatis enim quam voluptate eos natus nemo laborum
           veniam. Sapiente voluptas impedit, voluptates quasi ipsam
         </p>
+        <div className="mt-6 ">
+          <Link to={"/"}>
+            <button className=" uppercase btn  ">Read More</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
